@@ -21,6 +21,7 @@ import { faShareNodes } from '@fortawesome/free-solid-svg-icons';
   ]
 })
 export class EventDetailModalComponent implements OnInit {
+  
   faShareNodes=faShareNodes;
   hasTicket: boolean = false;
   showTooltip: boolean = false;

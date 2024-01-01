@@ -8,7 +8,7 @@ import { jwtDecode } from 'jwt-decode';
   providedIn: 'root',
 })
 export class UserService {
-  private baseUrl = 'http://localhost:3000/users';
+  private baseUrl = 'https://costume-elephant.cyclic.app/users';
   private isAuthenticated = new BehaviorSubject<boolean>(false);
   private loggedInWithGoogle = new BehaviorSubject<boolean>(false);
   private authToken: string | null = localStorage.getItem('authToken');

@@ -6,7 +6,7 @@ import { Observable, Subject, catchError, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class EventService {
-  private baseUrl = 'http://localhost:3000/events'; 
+  private baseUrl = 'https://costume-elephant.cyclic.app/events'; 
   private searchedEventsSource = new Subject<any[]>();
   searchedEvents$ = this.searchedEventsSource.asObservable();
 
