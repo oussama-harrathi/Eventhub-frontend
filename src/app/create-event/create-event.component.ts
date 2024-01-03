@@ -54,7 +54,7 @@ export class CreateEventComponent {
     }
 
     try {
-      const preSignedUrl = "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/67R69JOo2qGaTRgNyEJuEa3HKM7fPMkcwxm272X_I57mWnxpw03AjbJ9-sD42aSF/n/frrkyaorrjmz/b/EventHub_bucket/o/";
+      const preSignedUrl = "https://frrkyaorrjmz.objectstorage.eu-frankfurt-1.oci.customer-oci.com/p/67R69JOo2qGaTRgNyEJuEa3HKM7fPMkcwxm272X_I57mWnxpw03AjbJ9-sD42aSF/n/frrkyaorrjmz/b/EventHub_bucket/o/";
       if (!preSignedUrl) {
         throw new Error('Failed to get pre-signed URL');
       }
