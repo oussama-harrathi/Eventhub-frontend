@@ -30,7 +30,7 @@ export class EventService {
       headers,
       body: eventData
     });
-    console.log(eventData);
+    console.log(eventData)
     
     return this.http.post(`${this.baseUrl}/create`, eventData, { headers })
     .pipe(

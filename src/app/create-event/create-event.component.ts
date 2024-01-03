@@ -77,6 +77,7 @@ export class CreateEventComponent {
     if (this.selectedFile) {
       formData.append('eventPictureUrl', uploadedImageUrl);
     }
+    
 
       // Make the API call with formData
       this.eventService.createEvent(formData).subscribe(
