@@ -95,14 +95,17 @@ export class CreateEventComponent {
  
 
   uploadFileToBucket(file: File, preSignedUrl: string): Promise<string> {
-    return this.httpClient.put(preSignedUrl, file, {
+    // Generate a unique file name
+    const uniqueFileName = `event-${Date.now()}-${file.name}`;
+    const uploadUrl = `${preSignedUrl}${encodeURIComponent(uniqueFileName)}`;
+  
+    return this.httpClient.put(uploadUrl, file, {
       headers: {
         'Content-Type': file.type
       },
       responseType: 'text'
     })
     .toPromise()
-    .then(response => preSignedUrl); // Return the pre-signed URL upon successful upload
+    .then(response => uploadUrl); // Return the URL with the unique file name upon successful upload
   }
-  
 }
