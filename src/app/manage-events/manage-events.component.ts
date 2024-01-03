@@ -25,7 +25,7 @@ export class ManageEventsComponent implements OnInit {
   }
 
   canWithdraw(eventDate: string): boolean {
-    console.log('Raw event date:', eventDate);
+    
     if (!eventDate) {
       console.log('Event date is undefined or null.');
       return false;
@@ -33,7 +33,7 @@ export class ManageEventsComponent implements OnInit {
   
     // Parse the ISO 8601 date string to a Date object
     const eventDateObject = new Date(eventDate);
-    console.log('Parsed event date:', eventDateObject);
+    
   
     // Calculate three days after the event date
     const threeDaysAfterEvent = eventDateObject.getTime() + 3 * 24 * 60 * 60 * 1000;
