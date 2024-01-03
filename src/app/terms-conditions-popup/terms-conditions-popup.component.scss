@@ -1,14 +1,14 @@
 .terms-popup {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
+  
+  
+  
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: #f8f9fa;
-  padding: 15px;
+  padding: 17px;
   text-align: center;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
   z-index: 1000;
@@ -29,10 +29,12 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .terms-popup {
-      padding: 10px;
+      padding: 10px 1px;
+      
       font-size: 14px;
+      
   }
 
   .terms-popup button {
