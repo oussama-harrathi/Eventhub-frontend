@@ -16,7 +16,7 @@
     "CATEGORY_TECHNOLOGY": "تكنولوجيا",
     "EVENT_PICTURE_LABEL": "صورة الحدث",
     "ALLOWED_TICKETS_LABEL": "عدد التذاكر المسموح بها",
-    "PRICE_LABEL": "السعر",
+    "PRICE_LABEL": " $السعر",
     "CREATE_EVENT_BUTTON": "إنشاء الحدث",
     "FORM_ERROR_MESSAGE": "يرجى ملء جميع الحقول المطلوبة قبل الإرسال.",
     "EVENT_LOCATION": "الموقع",

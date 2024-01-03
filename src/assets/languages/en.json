@@ -16,7 +16,7 @@
     "CATEGORY_TECHNOLOGY": "technology",
     "EVENT_PICTURE_LABEL": "Event Picture",
     "ALLOWED_TICKETS_LABEL": "Allowed Tickets Number",
-    "PRICE_LABEL": "Price",
+    "PRICE_LABEL": "Price in dollars",
     "CREATE_EVENT_BUTTON": "Create Event",
     "FORM_ERROR_MESSAGE": "Please fill all required fields before submitting.",
     "EVENT_LOCATION": "Location",

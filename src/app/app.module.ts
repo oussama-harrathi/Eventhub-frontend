@@ -40,6 +40,7 @@ import { NgxStripeModule } from 'ngx-stripe';
 import { TermsConditionsPopupComponent } from './terms-conditions-popup/terms-conditions-popup.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoaderComponent } from './loader/loader.component';
 
 
 
@@ -81,6 +82,7 @@ const analytics = getAnalytics(app);
     PaymentComponent,
     ManageEventsComponent,
     TermsConditionsPopupComponent,
+    LoaderComponent
     
     
     

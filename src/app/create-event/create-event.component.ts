@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { EventService } from '../services/event.service';
+import { LoaderService } from '../services/loader.service';
 
 interface EventData {
   eventName: string;
@@ -36,7 +37,7 @@ export class CreateEventComponent {
   message: string = '';
   submitted = false;
 
-  constructor(private eventService: EventService, private httpClient: HttpClient) {}
+  constructor(private eventService: EventService,private loaderService: LoaderService, private httpClient: HttpClient) {}
 
   onFileChange(event: Event) {
     const input = event.target as HTMLInputElement;
@@ -52,6 +53,7 @@ export class CreateEventComponent {
       this.message = 'Form is invalid or no file selected.';
       return;
     }
+    this.loaderService.show(); 
    
     try {
       const preSignedUrl = "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/67R69JOo2qGaTRgNyEJuEa3HKM7fPMkcwxm272X_I57mWnxpw03AjbJ9-sD42aSF/n/frrkyaorrjmz/b/EventHub_bucket/o/";
@@ -83,16 +85,19 @@ export class CreateEventComponent {
       this.eventService.createEvent(formData).subscribe(
         response => {
           this.message = 'Event created successfully';
+          this.loaderService.hide();
           this.eventForm.resetForm();
           this.submitted = false;
         },
         error => {
           this.message = 'Failed to create event';
+          this.loaderService.hide();
           this.submitted = false;
         }
       );
     } catch (error) {
       this.message = error instanceof Error ? error.message : 'Unknown error occurred';
+      this.loaderService.hide();
       this.submitted = false;
     }
   }

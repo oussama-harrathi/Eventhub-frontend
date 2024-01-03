@@ -16,7 +16,7 @@
     "CATEGORY_TECHNOLOGY": "technológia",
     "EVENT_PICTURE_LABEL": "Esemény képe",
     "ALLOWED_TICKETS_LABEL": "Engedélyezett jegyek száma",
-    "PRICE_LABEL": "Ár",
+    "PRICE_LABEL": "Ár$",
     "CREATE_EVENT_BUTTON": "Esemény létrehozása",
     "FORM_ERROR_MESSAGE": "Kérjük, töltse ki az összes szükséges mezőt a beküldés előtt.",
     "EVENT_LOCATION": "Helyszín",
