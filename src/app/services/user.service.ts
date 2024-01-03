@@ -201,7 +201,5 @@ export class UserService {
     this.userDetails.next(null);
     // Clear other relevant data
   }
-  broadcastLoginState(isLoggedIn: boolean) {
-    localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn));
-  }
+ 
 }
