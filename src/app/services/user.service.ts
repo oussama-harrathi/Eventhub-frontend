@@ -85,11 +85,15 @@ export class UserService {
 
   login(email: string, password: string): Observable<any> {
     const body = { email, password };
+    console.log('Login request initiated', body);
     return this.http.post(`${this.baseUrl}/login`, body).pipe(
       tap((response: any) => {
+        console.log('Login response received', response);
         if (response && response.token) {
+          console.log('Storing token in localStorage', response.token);
           localStorage.setItem('authToken', response.token); // Store token in localStorage
           this.authToken = response.token;
+          console.log('Updating authentication status to true'); 
           this.updateAuthenticationStatus(true);
           localStorage.setItem('isLoggedIn', 'true');
           this.setLoggedInWithGoogle(false);
