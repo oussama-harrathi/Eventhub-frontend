@@ -52,17 +52,30 @@ export class CreateEventComponent {
       this.message = 'Form is invalid or no file selected.';
       return;
     }
-
+    const preSignedUrl = "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/67R69JOo2qGaTRgNyEJuEa3HKM7fPMkcwxm272X_I57mWnxpw03AjbJ9-sD42aSF/n/frrkyaorrjmz/b/EventHub_bucket/o/";
+    const uploadedImageUrl = await this.uploadFileToBucket(this.selectedFile, preSignedUrl);
+      if (!uploadedImageUrl) {
+        throw new Error('Failed to upload image');
+      }
+    const formData = new FormData();
+    formData.append('eventName', this.eventData.eventName);
+    formData.append('eventDate', this.eventData.eventDate);
+    formData.append('eventTime', this.eventData.eventTime);
+    formData.append('location', this.eventData.location);
+    formData.append('description', this.eventData.description);
+    formData.append('category', this.eventData.category);
+    formData.append('allowedTicketsNumber', this.eventData.allowedTicketsNumber.toString());
+    formData.append('price', this.eventData.price.toString());
+    if (this.selectedFile) {
+      formData.append('eventPictureUrl', uploadedImageUrl);
+    }
     try {
-      const preSignedUrl = "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/67R69JOo2qGaTRgNyEJuEa3HKM7fPMkcwxm272X_I57mWnxpw03AjbJ9-sD42aSF/n/frrkyaorrjmz/b/EventHub_bucket/o/";
+      
       if (!preSignedUrl) {
         throw new Error('Failed to get pre-signed URL');
       }
 
-      const uploadedImageUrl = await this.uploadFileToBucket(this.selectedFile, preSignedUrl);
-      if (!uploadedImageUrl) {
-        throw new Error('Failed to upload image');
-      }
+      
 
       // Prepare the form data
       const formData = new FormData();
