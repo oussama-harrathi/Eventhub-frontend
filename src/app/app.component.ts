@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,10 @@ import { UserService } from './services/user.service';
 export class AppComponent {
   
   title = 'EventHub';
-  constructor(private userService:UserService){}
+  constructor(private translate: TranslateService,private userService:UserService){
+  translate.setDefaultLang('en'); // Set default language to English
+    translate.use('en'); // Use English translations
+  }
   ngOnInit() {
     window.addEventListener('storage', this.onStorageEvent);
   }
