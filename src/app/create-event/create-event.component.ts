@@ -52,12 +52,20 @@ export class CreateEventComponent {
       this.message = 'Form is invalid or no file selected.';
       return;
     }
-    const preSignedUrl = "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/67R69JOo2qGaTRgNyEJuEa3HKM7fPMkcwxm272X_I57mWnxpw03AjbJ9-sD42aSF/n/frrkyaorrjmz/b/EventHub_bucket/o/";
-    const uploadedImageUrl = await this.uploadFileToBucket(this.selectedFile, preSignedUrl);
+   
+    try {
+      const preSignedUrl = "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/67R69JOo2qGaTRgNyEJuEa3HKM7fPMkcwxm272X_I57mWnxpw03AjbJ9-sD42aSF/n/frrkyaorrjmz/b/EventHub_bucket/o/";
+      if (!preSignedUrl) {
+        throw new Error('Failed to get pre-signed URL');
+      }
+
+      const uploadedImageUrl = await this.uploadFileToBucket(this.selectedFile, preSignedUrl);
       if (!uploadedImageUrl) {
         throw new Error('Failed to upload image');
       }
-    const formData = new FormData();
+
+      // Prepare the form data
+      const formData = new FormData();
     formData.append('eventName', this.eventData.eventName);
     formData.append('eventDate', this.eventData.eventDate);
     formData.append('eventTime', this.eventData.eventTime);
@@ -69,23 +77,6 @@ export class CreateEventComponent {
     if (this.selectedFile) {
       formData.append('eventPictureUrl', uploadedImageUrl);
     }
-    try {
-      
-      if (!preSignedUrl) {
-        throw new Error('Failed to get pre-signed URL');
-      }
-
-      
-
-      // Prepare the form data
-      const formData = new FormData();
-      for (const key in this.eventData) {
-        if (Object.prototype.hasOwnProperty.call(this.eventData, key)) {
-          const value = (this.eventData as any)[key];
-          formData.append(key, value);
-        }
-      }
-      formData.append('eventPictureUrl', uploadedImageUrl);
 
       // Make the API call with formData
       this.eventService.createEvent(formData).subscribe(
