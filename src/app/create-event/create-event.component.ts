@@ -95,12 +95,14 @@ export class CreateEventComponent {
  
 
   uploadFileToBucket(file: File, preSignedUrl: string): Promise<string> {
-    const uploadData = new FormData();
-    uploadData.append('file', file);
-  
-    return this.httpClient.put(preSignedUrl, uploadData, { responseType: 'text' })
-      .toPromise()
-      .then(response => preSignedUrl); // Return the pre-signed URL upon successful upload
+    return this.httpClient.put(preSignedUrl, file, {
+      headers: {
+        'Content-Type': file.type
+      },
+      responseType: 'text'
+    })
+    .toPromise()
+    .then(response => preSignedUrl); // Return the pre-signed URL upon successful upload
   }
   
 }
