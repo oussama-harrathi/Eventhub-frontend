@@ -91,6 +91,7 @@ export class UserService {
           localStorage.setItem('authToken', response.token); // Store token in localStorage
           this.authToken = response.token;
           this.updateAuthenticationStatus(true);
+          localStorage.setItem('isLoggedIn', 'true');
           this.setLoggedInWithGoogle(false);
           this.authChannel.postMessage({ action: 'login', token: response.token });
           this.setAutoLogout(); // Call setAutoLogout only if authToken is not null
@@ -112,6 +113,7 @@ export class UserService {
           localStorage.setItem('googleLoginStatus', 'true');
           this.authToken = response.token;
           this.updateAuthenticationStatus(true);
+          localStorage.setItem('isLoggedIn', 'true');
           this.setLoggedInWithGoogle(true);
           this.authChannel.postMessage({ action: 'login', token: response.token });
           this.setAutoLogout(); // Call setAutoLogout only if authToken is not null
@@ -196,6 +198,7 @@ export class UserService {
     localStorage.removeItem('googleLoginStatus'); // Clear token from localStorage
     this.authToken = null;
     this.updateAuthenticationStatus(false);
+    localStorage.setItem('isLoggedIn', 'false');
     this.setLoggedInWithGoogle(false);
     this.authChannel.postMessage({ action: 'logout' });
     this.userDetails.next(null);
