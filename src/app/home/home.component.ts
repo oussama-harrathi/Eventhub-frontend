@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   private searchSubscription!: Subscription;
   isExpired(eventDate: string): boolean {
     const eventDateTime = new Date(eventDate);
-    console.log('Event Date:', eventDate, 'Event DateTime:', eventDateTime);
+    
   
     const now = new Date();
     return eventDateTime < now;
