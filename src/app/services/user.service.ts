@@ -133,6 +133,10 @@ export class UserService {
           this.setLoggedInWithGoogle(true);
           this.authChannel.postMessage({ action: 'login', token: response.token });
           this.setAutoLogout(); // Call setAutoLogout only if authToken is not null
+          const decodedToken = this.getDecodedToken();
+          if (decodedToken) {
+            this.userDetails.next({ name: decodedToken.full_name, email: decodedToken.email });
+          }
         }
       })
     );
