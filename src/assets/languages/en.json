@@ -129,7 +129,10 @@
     "WHY_EVENTHUB_CONTENT.EFFICIENCY":"Efficiency: Save time and effort with our platform.",
     "CONTACT_US_SECTION_ABOUT": "Contact Us",
     "CONTACT_US_CONTENT_ABOUT": "Have questions? Reach out at oussamaharrathi333@gmail.com.",
-    "THANK_YOU_MESSAGE": "Thank you for choosing EventHub. Let's make your events unforgettable!"
+    "THANK_YOU_MESSAGE": "Thank you for choosing EventHub. Let's make your events unforgettable!",
+    "SEARCH_EXPIRED_EVENTS_SECTION": "10. Searching for Expired Events",
+"SEARCH_EXPIRED_EVENTS_CONTENT": "Even after an event has expired, users can search for it by name using the search bar. This allows for viewing of the event details and use of the associated chat function."
+
 }
   
   

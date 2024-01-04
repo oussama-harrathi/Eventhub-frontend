@@ -130,7 +130,10 @@
     "WHY_EVENTHUB_CONTENT.EFFICIENCY":        "الكفاءة: وفر الوقت والجهد مع منصتنا.",
     "CONTACT_US_SECTION_ABOUT": "اتصل بنا",
     "CONTACT_US_CONTENT_ABOUT": "هل لديك أسئلة؟ تواصل معنا عبر oussamaharrathi333@gmail.com.",
-    "THANK_YOU_MESSAGE": "شكرًا لاختيارك EventHub. دعونا نجعل فعالياتك لا تُنسى!"
+    "THANK_YOU_MESSAGE": "شكرًا لاختيارك EventHub. دعونا نجعل فعالياتك لا تُنسى!",
+    "SEARCH_EXPIRED_EVENTS_SECTION": "10. البحث عن الأحداث المنتهية",
+"SEARCH_EXPIRED_EVENTS_CONTENT": "حتى بعد انتهاء الحدث، يمكن للمستخدمين البحث عنه بالاسم باستخدام شريط البحث. يسمح هذا بعرض تفاصيل الحدث واستخدام وظيفة الدردشة المرتبطة به."
+
 }
 
 

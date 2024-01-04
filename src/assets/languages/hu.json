@@ -128,6 +128,9 @@
     "WHY_EVENTHUB_CONTENT.EFFICIENCY":"Hatékonyság: Időt és energiát takaríthat meg platformunkkal.",
     "CONTACT_US_SECTION_ABOUT": "Lépjen Kapcsolatba Velünk",
     "CONTACT_US_CONTENT_ABOUT": "Kérdése van? Vegye fel velünk a kapcsolatot az oussamaharrathi333@gmail.com címen.",
-    "THANK_YOU_MESSAGE": "Köszönjük, hogy az EventHub-ot választotta. Tegyük felejthetetlenné az Ön eseményeit!"
+    "THANK_YOU_MESSAGE": "Köszönjük, hogy az EventHub-ot választotta. Tegyük felejthetetlenné az Ön eseményeit!",
+    "SEARCH_EXPIRED_EVENTS_SECTION": "10. Lejárt események keresése",
+"SEARCH_EXPIRED_EVENTS_CONTENT": "Még egy esemény lejárta után is a felhasználók kereshetnek rá a név alapján a keresősáv használatával. Ez lehetővé teszi az esemény részleteinek megtekintését és a hozzá kapcsolódó csevegési funkció használatát."
+
 }
 
