@@ -43,6 +43,7 @@
     "LOCATION": "الموقع",
     "DATE": "التاريخ",
     "TIME": "الوقت",
+    "CATEGORY_OTHER": "آخر",
     "TICKETS_AVAILABLE": "التذاكر المتاحة",
     "LOGIN_HEADER": "تسجيل الدخول",
     "ERROR_MESSAGE": "رسالة الخطأ",

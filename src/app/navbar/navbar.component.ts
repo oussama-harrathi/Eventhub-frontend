@@ -49,7 +49,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     this.authSubscription = this.userService.isAuthenticated$.subscribe(status => {
       this.isLoggedIn = status;
-      console.log("Is Logged In: ", this.isLoggedIn); // Debugging
+      
       this.changeDetectorRef.detectChanges();
     });
 

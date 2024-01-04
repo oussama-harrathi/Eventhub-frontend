@@ -48,7 +48,7 @@ export class SignupComponent {
         this.registrationSuccess = typedResponse.message;
         setTimeout(() => {
           this.router.navigate(['/login']);
-        }, 1500);
+        }, 2500);
       },
       (error) => {
         this.registrationError = error.error.message;

@@ -14,6 +14,8 @@
     "CATEGORY_MUSIC": "music",
     "CATEGORY_SPORTS": "sports",
     "CATEGORY_TECHNOLOGY": "technology",
+    "CATEGORY_OTHER": "other",
+    
     "EVENT_PICTURE_LABEL": "Event Picture",
     "ALLOWED_TICKETS_LABEL": "Allowed Tickets Number",
     "PRICE_LABEL": "Price in dollars",

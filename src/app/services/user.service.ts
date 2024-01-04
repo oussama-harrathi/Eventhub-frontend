@@ -31,21 +31,32 @@ export class UserService {
     const googleLoginStatus = localStorage.getItem('googleLoginStatus');
     this.setLoggedInWithGoogle(googleLoginStatus === 'true');
   }
+  private debounceTimer: any;
+
+  private debounce(func: Function, delay: number) {
+    clearTimeout(this.debounceTimer);
+    this.debounceTimer = setTimeout(func, delay);
+  }
 
   private handleAuthChannelMessage = (message: MessageEvent) => {
     switch (message.data.action) {
       case 'login':
-        this.updateAuthenticationStatus(true);
-        this.authToken = message.data.token;
-        this.setAutoLogout();
+        this.debounce(() => {
+          this.updateAuthenticationStatus(true);
+          this.authToken = message.data.token;
+          this.setAutoLogout();
+        }, 500); // Delay of 500 milliseconds
         break;
       case 'logout':
-        this.logout();
+        this.debounce(() => {
+          this.logout();
+        }, 500); // Delay of 500 milliseconds
         break;
       default:
         break;
     }
   };
+  
 
   private getAuthHeaders() {
     return new HttpHeaders({
@@ -95,6 +106,7 @@ export class UserService {
           this.authToken = response.token;
           console.log('Updating authentication status to true'); 
           this.updateAuthenticationStatus(true);
+          console.log('Updated authentication status to true'); 
           localStorage.setItem('isLoggedIn', 'true');
           this.setLoggedInWithGoogle(false);
           this.authChannel.postMessage({ action: 'login', token: response.token });
