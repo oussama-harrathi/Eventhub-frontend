@@ -35,7 +35,7 @@
   </button>
 
   <mat-menu #menu="matMenu" class="menu" xPosition="before">
-    <div style="text-align: center;" class="user-info">
+    <div *ngIf="isLoggedIn" style="text-align: center;" class="user-info">
       <div class="user-name" style="font-size: 20px; font-weight: bold;">{{ userName }}</div>
       <div class="user-email" style="font-size: 16px; color: #666;">{{ userEmail }}</div>
     </div>
@@ -55,7 +55,7 @@
 
   <!-- Profile Dropdown Menu for Large Screens -->
   <mat-menu #profileMenu="matMenu" class="profile-menu">
-    <div style="text-align: center; padding: 10px;padding-bottom: 20px;" class="user-info">
+    <div *ngIf="isLoggedIn" style="text-align: center; padding: 10px;padding-bottom: 20px;" class="user-info">
       <div class="user-name" style="font-size: 20px; font-weight: bold;">{{ userName }}</div>
       <div class="user-email" style="font-size: 16px; color: #666;">{{ userEmail }}</div>
     </div>
