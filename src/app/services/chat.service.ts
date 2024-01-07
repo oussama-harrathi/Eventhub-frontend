@@ -12,7 +12,7 @@ export class ChatService {
   getMessages(eventId: string): Observable<any[]> {
     const messages = new BehaviorSubject<any[]>([]);
     const db = getDatabase();
-    const messagesRef = query(ref(db, `chats/${eventId}`), limitToLast(100)); // Adjust the limit as needed
+    const messagesRef = query(ref(db, `chats/${eventId}`), limitToLast(100)); 
 
     onValue(messagesRef, (snapshot) => {
       const data = snapshot.val();

@@ -25,10 +25,10 @@ export class EventDetailModalComponent implements OnInit {
   faShareNodes=faShareNodes;
   hasTicket: boolean = false;
   showTooltip: boolean = false;
-  showChat: boolean = false; // New property to control chat visibility
+  showChat: boolean = false; 
   showEmojiPicker: boolean = false;
-  messages$!: Observable<any[]>; // To hold chat messages
-  newMessage: string = ''; // For new message input
+  messages$!: Observable<any[]>; 
+  newMessage: string = ''; 
   isOrganizer: boolean = false;
 
   @Input() event: any;
@@ -89,10 +89,10 @@ export class EventDetailModalComponent implements OnInit {
       }
     } else {
       this.showTooltip = true;
-      console.log('Tooltip should show: ', this.showTooltip); // Log when tooltip is shown
+      console.log('Tooltip should show: ', this.showTooltip); 
       setTimeout(() => {
         this.showTooltip = false;
-        console.log('Tooltip should hide: ', this.showTooltip); // Log when tooltip is hidden
+        console.log('Tooltip should hide: ', this.showTooltip); 
       }, 3000);
     }
   }
@@ -131,7 +131,7 @@ export class EventDetailModalComponent implements OnInit {
     if (token) {
       try {
         const decodedToken: any = jwtDecode(token);
-        // Replace 'user_id' and 'full_name' with the actual properties from your token
+       
         return { userId: decodedToken?.user_id }; 
         
       } catch (error) {
@@ -148,7 +148,7 @@ export class EventDetailModalComponent implements OnInit {
 
   onGetTicket() {
     if (this.event && this.event.eventDate && this.event.eventTime) {
-      // Since the dates are in ISO format, we can directly parse them
+      
       const eventDateTime = new Date(this.event.eventDate);
       const now = new Date();
   
@@ -160,7 +160,7 @@ export class EventDetailModalComponent implements OnInit {
       }
     } else {
       console.error('Invalid event data');
-      // Handle invalid event data appropriately
+      
     }
   }
   
@@ -177,14 +177,14 @@ export class EventDetailModalComponent implements OnInit {
       navigator.share({
         title: this.event.eventName,
         text: `Check out this event: ${this.event.eventName}`,
-        url: window.location.href  // or any other URL you want to share
+        url: window.location.href  
       }).then(() => {
         console.log('Event shared successfully');
       }).catch((error) => {
         console.error('Error sharing event:', error);
       });
     } else {
-      // Fallback for browsers that do not support the Web Share API
+      
       console.log('Web Share API is not supported in this browser.');
     }
   }

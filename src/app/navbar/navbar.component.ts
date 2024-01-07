@@ -106,27 +106,27 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   setUserDetails() {
-    // Assuming you have a method to get the decoded token
+    
     const tokenDetails = this.userService.getDecodedToken();
     if (tokenDetails) {
-      this.userName = tokenDetails.full_name; // Adjust the property name as per your token structure
-      this.userEmail = tokenDetails.email; // Adjust the property name as per your token structure
+      this.userName = tokenDetails.full_name; 
+      this.userEmail = tokenDetails.email; 
     }
   }
 
   logout() {
-    this.userService.logout(); // Call logout from UserService
-    this.router.navigate(['/home']); // Consider moving this to UserService if appropriate
+    this.userService.logout(); 
+    this.router.navigate(['/home']); 
   }
   navigateToChangePassword() {
-    this.router.navigate(['/change-password']); // Update with your actual route
+    this.router.navigate(['/change-password']); 
   }
   navigateToCreateEvent() {
-    this.router.navigate(['/create-event']); // Adjust the route as per your setup
+    this.router.navigate(['/create-event']); 
   }
   onSearchChange(): void {
-    // Call this method when the search input changes
-    this.eventService.searchEvents(this.searchInput).subscribe(); // Assuming you have a method in your EventService to handle search
+    
+    this.eventService.searchEvents(this.searchInput).subscribe(); 
   }
   navigateToManageEvents() {
     this.router.navigate(['/manage-events']);

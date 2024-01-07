@@ -16,11 +16,11 @@ export class EventService {
   
 
   createEvent(eventData: FormData): Observable<any> {
-    // Retrieve the authToken directly from local storage
+    
     const authToken = localStorage.getItem('authToken');
     console.log('Auth Token:', authToken);
 
-    // Create headers with the retrieved token
+    
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
@@ -36,7 +36,7 @@ export class EventService {
     .pipe(
       catchError(error => {
         console.error('Error creating event:', error);
-        throw error; // Rethrow the error to propagate it to the caller
+        throw error; 
       })
     );
 
@@ -55,7 +55,7 @@ export class EventService {
     }
     return this.http.get<any[]>(`${this.baseUrl}/search?term=${searchTerm}`)
       .pipe(
-        tap(events => this.emitSearchedEvents(events)), // Ensure this line is emitting the results
+        tap(events => this.emitSearchedEvents(events)), 
         catchError(error => {
           console.error('Error searching events:', error);
           throw error;

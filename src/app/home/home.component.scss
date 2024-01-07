@@ -19,7 +19,7 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  color: black; // Soft cream color for contrast and readability
+  color: black; 
   .expired-sticker {
     position: absolute;
     top: 100px;
@@ -67,12 +67,12 @@
     font-size: 1.1rem;
   }
   .event-description {
-    display: block; // Ensuring the description is a block element
+    display: block; 
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; // Truncating with ellipsis
-    max-width: 90%; // Adjust as needed
-    margin: 0 auto 10px; // Centering and adding margin
+    text-overflow: ellipsis; 
+    max-width: 90%; 
+    margin: 0 auto 10px; 
   }
 
   .event-pricing {
@@ -83,19 +83,19 @@
   }
 
   .price, .available-tickets {
-    background: rgba(255, 255, 255, 0.1); // Semi-transparent white
-    color: black; // Light cream color
+    background: rgba(255, 255, 255, 0.1); 
+    color: black; 
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     font-weight: bold;
-    border: 1px solid black; // Light cream border
+    border: 1px solid black; 
 
     fa-icon {
       margin-right: 8px;
-      color:black; // Harmonizing with the gradient
+      color:black; 
     }
 
     span {
@@ -108,7 +108,7 @@
     display: inline-block;
     margin: 15px;
     padding: 10px 20px;
-    background-color: #d18c35; // Harmonizing with the gradient
+    background-color: #d18c35; 
     color: white;
     border-radius: 5px;
     text-align: center;

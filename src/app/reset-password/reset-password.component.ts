@@ -17,8 +17,8 @@ export class ResetPasswordComponent {
   constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // Extract the reset token from the URL
-    // Add logic to extract the reset token from the URL query parameters
+    
+    
     this.resetToken = this.route.snapshot.queryParamMap.get('token') || '';
   }
 

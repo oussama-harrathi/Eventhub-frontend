@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .event-details {
-    background: linear-gradient(to right bottom, #e8efff, #d6e0f0); /* Diagonal gradient */
+    background: linear-gradient(to right bottom, #e8efff, #d6e0f0); 
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -10,7 +10,7 @@
 
 .event-details h2 {
     font-size: 38px;
-    color: #294c60; /* Updated color */
+    color: #294c60; 
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px #aab2c0;
 }
@@ -33,7 +33,7 @@
     width: 30%;
     padding: 14px;
     font-size: 17px;
-    border: 3px solid #b0c4de; /* Light steel blue border */
+    border: 3px solid #b0c4de; 
     border-radius: 8px;
     margin-bottom: 30px;
     transition: border-color 0.3s;
@@ -41,11 +41,11 @@
 
 .event-details input[type="number"]:hover,
 .event-details input[type="number"]:focus {
-    border-color: #1e395b; /* Darker blue for focus and hover */
+    border-color: #1e395b;
 }
 
 .event-details button {
-    background-color: #5a7d9a; /* Soft blue */
+    background-color: #5a7d9a; 
     margin-top: 30px;
     color: #fff;
     padding: 15px 30px;
@@ -58,7 +58,7 @@
 }
 
 .event-details button:hover {
-    background-color: #3b5a72; /* Darker blue on hover */
+    background-color: #3b5a72; 
     transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }

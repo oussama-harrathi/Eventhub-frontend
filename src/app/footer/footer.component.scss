@@ -1,6 +1,6 @@
 .footer {
   background: linear-gradient(18deg, #000000, #c89116);
-  color: #f8f4e3; // Light cream color for contrast
+  color: #f8f4e3; 
   padding: 20px;
   font-family: Arial, sans-serif;
   font-weight: bolder;
@@ -25,7 +25,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 10px;
-        color: #ead095; // Slightly darker for links
+        color: #ead095; 
         text-decoration: none;
         &:hover {
           color: crimson;
@@ -40,7 +40,7 @@
 
   .middle a,
   .right a {
-    color: #f8f4e3; // Light cream color for links
+    color: #f8f4e3; 
     text-decoration: none;
     margin-right: 10px; 
   }

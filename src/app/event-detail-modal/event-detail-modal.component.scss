@@ -12,7 +12,7 @@
 
   .modal-content {
     background: white;
-    color: #333; // Darker text color for better contrast
+    color: #333; 
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
@@ -25,11 +25,11 @@
 
     .share-icon {
       cursor: pointer;
-      // Position it as per your design requirement
-      float: right; // Example: Align to the right
-      margin-right: 10px; // Spacing from the right edge
-      margin-top: -30px; // Adjust vertical position
-      font-size: 20px; // Size of the icon
+      
+      float: right; 
+      margin-right: 10px; 
+      margin-top: -30px; 
+      font-size: 20px; 
     }
     
 
@@ -51,7 +51,7 @@
     
         h2 {
           margin: 0;
-          margin-right: 15px; // Spacing between the title and the icon
+          margin-right: 15px; 
         }
     
         
@@ -89,7 +89,7 @@
       
 
       .chat-button {
-        /* Style the chat button as needed */
+        
         padding: 10px 15px;
         background-color: #4CAF50;
         color: white;
@@ -111,14 +111,14 @@
       .chat-messages {
         margin-top: 20px;
         padding: 10px;
-        background: #f7f7f7; // Light gray background
+        background: #f7f7f7; 
         border-radius: 5px;
         max-height: 200px;
         overflow-y: auto;
 
         .message {
           padding: 5px;
-          border-bottom: 1px solid #ddd; // Light divider between messages
+          border-bottom: 1px solid #ddd; 
 
           &:last-child {
             border-bottom: none;
@@ -168,7 +168,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 20px; // Adjust as needed
+        margin-top: 20px; 
     
         .buy-ticket-button {
           margin-top: 20px;
@@ -194,7 +194,7 @@
           font-size: 30px;
           margin-left: 10px;
           margin-top: 17px;
-           // Space between the button and the icon
+           
         }
       }
 

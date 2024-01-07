@@ -44,7 +44,7 @@ export class PaymentComponent implements OnInit {
           "::placeholder": {
             color: "#aab7c4"
           },
-          margin: '0 0 20px 0' // Add space below each input
+          margin: '0 0 20px 0' 
         },
         invalid: {
           color: "#fa755a",
@@ -55,7 +55,7 @@ export class PaymentComponent implements OnInit {
       this.card.mount(this.cardElementRef.nativeElement);
     } else {
       console.error("Stripe failed to initialize");
-      // Handle Stripe initialization failure
+      
     }
   }
 
@@ -81,7 +81,7 @@ export class PaymentComponent implements OnInit {
       payment_method: {
         card: this.card,
         billing_details: {
-          // Include any required billing details here
+          
         }
       }
     });
@@ -108,14 +108,14 @@ export class PaymentComponent implements OnInit {
         console.log('Tickets purchased successfully');
         this.showSuccess('Payment successful! Please check your email for the tickets.');
         setTimeout(() => {
-          this.router.navigate(['/home']); // Navigate to home after 5 seconds
+          this.router.navigate(['/home']); 
         }, 5000);
       },
       error: (error) => {
         console.error('Error purchasing tickets:', error);
         let errorMessage = 'Failed to purchase tickets. Please try again.';
         if (error.error && error.error.message) {
-          errorMessage = error.error.message; // Use the backend-provided error message
+          errorMessage = error.error.message; 
         }
         this.showError(errorMessage);
       }
@@ -124,13 +124,13 @@ export class PaymentComponent implements OnInit {
 
   showError(message: string) {
     this.snackBar.open(message, 'Close', {
-      duration: 3000 // Duration in milliseconds after which the snackbar will be dismissed
+      duration: 5000 
     });
   }
 
   showSuccess(message: string) {
     this.snackBar.open(message, 'Close', {
-      duration: 5000 // Duration in milliseconds after which the snackbar will be dismissed
+      duration: 5000 
     });
   }
 }

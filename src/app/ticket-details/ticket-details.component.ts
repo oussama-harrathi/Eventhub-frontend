@@ -9,7 +9,7 @@ import { EventService } from '../services/event.service';
   styleUrls: ['./ticket-details.component.scss']
 })
 export class TicketDetailsComponent implements OnInit {
-  event: any; // Adjust this to match your event model
+  event: any; 
   numberOfTickets: number = 1;
 
   constructor(

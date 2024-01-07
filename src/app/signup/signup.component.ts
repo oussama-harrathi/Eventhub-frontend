@@ -8,7 +8,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 
-// Define an interface for the response
+
 interface RegistrationResponse {
   message: string;
 }
@@ -78,20 +78,20 @@ export class SignupComponent {
           };
           
 
-          // Send the user data to your backend
+          // Send the user data to  backend
           this.userService.registerGoogleUser(userData).subscribe(response => {
-            // Handle response, e.g., navigate to a dashboard
+            
             this.userService.setLoggedInWithGoogle(true);
             this.router.navigate(['/home']);
           });
         } else {
-          // Handle the case where result.user is null
+          
           console.error('User data is null');
         }
         
       })
       .catch(error => {
-        // Handle errors
+       
         console.error('Google Sign-In error:', error);
       });
   }

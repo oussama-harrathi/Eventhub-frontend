@@ -17,7 +17,7 @@ export class ManageEventsComponent implements OnInit {
       console.log('Number of events:', events.length);
       this.eventsCreatedByUser = events.map(event => ({
         ...event,
-        paypalEmail: '' // Initialize an empty string for PayPal email
+        paypalEmail: '' 
       }));
     }, error => {
       console.error('Error fetching events:', error);
@@ -31,7 +31,7 @@ export class ManageEventsComponent implements OnInit {
       return false;
     }
   
-    // Parse the ISO 8601 date string to a Date object
+    
     const eventDateObject = new Date(eventDate);
     
   

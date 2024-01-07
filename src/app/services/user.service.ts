@@ -45,7 +45,7 @@ export class UserService {
           this.updateAuthenticationStatus(true);
           this.authToken = message.data.token;
           this.setAutoLogout();
-        }, 500); // Delay of 500 milliseconds
+        }, 500); 
         break;
       case 'logout':
         this.debounce(() => {
@@ -110,7 +110,7 @@ export class UserService {
           localStorage.setItem('isLoggedIn', 'true');
           this.setLoggedInWithGoogle(false);
           this.authChannel.postMessage({ action: 'login', token: response.token });
-          this.setAutoLogout(); // Call setAutoLogout only if authToken is not null
+          this.setAutoLogout(); 
           const decodedToken = this.getDecodedToken();
         if (decodedToken) {
           this.userDetails.next({ name: decodedToken.full_name, email: decodedToken.email });
@@ -222,7 +222,7 @@ export class UserService {
     this.setLoggedInWithGoogle(false);
     this.authChannel.postMessage({ action: 'logout' });
     this.userDetails.next(null);
-    // Clear other relevant data
+    
   }
  
 }

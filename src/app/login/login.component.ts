@@ -96,7 +96,7 @@ export class LoginComponent {
       response => {
         this.resetMessage = 'If your email is registered, you will receive a password reset link.';
         this.showResetForm = false;
-        // Optionally, hide the form and display a confirmation message
+        
       },
       error => {
         console.error('Error requesting password reset:', error);
