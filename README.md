@@ -1,27 +1,64 @@
-# EventHub
+# **EventHub 🎉**  
+*A comprehensive platform for creating, managing, and participating in events.*  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+---
 
-## Development server
+## **About the Project**  
+EventHub was built over the course of **1.5 months**, combining dedication and creativity to deliver a robust and feature-rich platform.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## **Features 🚀**  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### **User Authentication**  
+- Sign up and log in using email (with email verification) or Google.  
+- Secure password management, including the ability to change passwords.  
 
-## Build
+### **Event Management**  
+- Create and manage events as an organizer.  
+- Browse and purchase tickets for existing events.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### **Payment Integration**  
+- Effortless ticket purchases via **Stripe**.  
+- Organizers receive payments through **PayPal**.  
 
-## Running unit tests
+### **Interactive Chat**  
+- Exclusive event-specific chat rooms for ticket holders, powered by **Firebase**.  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### **Multilingual Support**  
+- Seamless language switching between **English**, **Arabic**, and **Hungarian** using **i18n**.  
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## **Tech Stack 💻**  
+- **Frontend**: Angular with SCSS  
+- **Backend**: Node.js and Express  
+- **Database**: Oracle DB  
+- **Payment Systems**:  
+  - Stripe (for ticket purchases)  
+  - PayPal (for organizer payouts)  
+- **Chat System**: Firebase  
+- **Internationalization**: i18n  
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## **Demo 🎥**  
+Click the thumbnail or link below to watch the demo:  
+[![Watch the Demo](https://img.youtube.com/vi/WJ5vOZy866w/maxresdefault.jpg)](https://youtu.be/WJ5vOZy866w)  
+
+> *Note: The demo showcases the platform's features but does not include the translation functionality.*  
+
+---
+
+## **Contributions 🤝**  
+Contributions are welcome! Here's how you can help:  
+1. Fork the repository.  
+2. Create a new branch.  
+3. Submit a pull request with your changes or improvements.  
+
+---
+
+## **License 📄**  
+This project is licensed under the **MIT License**. See the LICENSE file for details.  
+
+---
